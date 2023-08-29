@@ -105,6 +105,17 @@ function filterByGender (array) {
     females = isFullname(females)
     return females
 }
+
+function isAdult (array){
+    let adults = array.filter((user)=>{
+        return user.age >= 18 
+    })
+    adults = isFullname(adults)
+    return adults 
+}
+
+
+
 //full name function
 function isFullname(array){
     let fullnames = array.map((user)=>{
@@ -113,14 +124,7 @@ function isFullname(array){
     return fullnames
 }
 //adult fitler function
-function isAdult (array){
-    let adults = array.filter((user)=>{
-        return user.age >= 18 
-    }).map((user)=>{
-        return user.firstName + " " + user.lastName
-    })
-    return adults 
-}
+
 
 
 
